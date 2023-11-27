@@ -111,6 +111,26 @@ class Solution:
 <summary><b>1. Two Sum</b></summary>
 
 <img src="media_readme/leetcode_tasks/array_and_hashing/1.png" />
+
+Time: O(n); Space: O(n);
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        '''
+        Создадим словарь с парой число:индекс_числа
+        Проиндекстируем список nums
+        Найдем разницу между target и числом
+        Если число размером в разницу есть в словаре, то возвращаем результат
+        Иначе добавляем число в словарь   
+        '''
+        hashmap = {}  # value : index
+
+        for k, v in enumerate(nums):
+            diff = target - v
+            if diff in hashmap:
+                return [hashmap[diff], k]
+            hashmap[v] = k
+```
 </details>
 
 <details>
