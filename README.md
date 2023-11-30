@@ -174,8 +174,38 @@ class Solution:
 </details>
 
 <details>
+<summary><b>605. Can Place Flowers</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/605.png" />
+
+Time: O(n); Space: O(1);
+```python
+class Solution:
+    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+        length = len(flowerbed)
+        i = 0
+
+        while i < length:
+            if flowerbed[i] == 0:
+                if i == length - 1 or flowerbed[i + 1] == 0:
+                    n -= 1
+                    i += 2  # пропускаем два элемента, так как они не могут влиять на посадку цветка
+                else:
+                    i += 3  # пропускаем три элемента, так как следующий элемент занят
+            else:
+                i += 2  # пропускаем два элемента, так как текущий элемент уже занят
+
+            if n <= 0:
+                return True
+
+        return False
+```
+</details>
+
+<details>
 <summary><b></b></summary>
 <img src="" />
+Time: O(); Space: O();
 </details>
 
 </details>
