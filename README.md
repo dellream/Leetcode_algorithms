@@ -153,6 +153,25 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>347. Top K Frequent Elements</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/347.png" />
+
+Time: O(n * k * log(k)); Space: O(n);
+```python
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        # Используем Counter для подсчета частоты элементов
+        num_count = Counter(nums)
+
+        # Сортируем элементы по частоте в убывающем порядке
+        sorted_nums = sorted(num_count, key=lambda x: num_count[x], reverse=True)
+
+        # Возвращаем первые k элементов
+        return sorted_nums[:k]
+```
+</details>
 
 <details>
 <summary><b></b></summary>
