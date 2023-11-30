@@ -33,7 +33,7 @@
 ### Задачи
 
 <details>
-<summary><b>Arrays and hashing:</b></summary>
+<summary><b>Arrays and hashing:</b></summary>  
 
 <details>
 <summary><b>217. Contains-duplicate:</b></summary>
@@ -132,6 +132,27 @@ class Solution:
             hashmap[v] = k
 ```
 </details>
+
+
+<details>
+<summary><b>49. Group Anagrams</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/49.png" />
+
+Time: O(n * k * log(k)); Space: O(n);
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        anagram_dict = defaultdict(list)
+        
+        for i, word in enumerate(strs):
+            sorted_word = ''.join(sorted(word))
+            anagram_dict[sorted_word].append(word)
+
+        return list(anagram_dict.values())
+```
+</details>
+
 
 <details>
 <summary><b></b></summary>
