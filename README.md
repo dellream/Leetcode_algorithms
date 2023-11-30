@@ -203,6 +203,36 @@ class Solution:
 </details>
 
 <details>
+<summary><b>941. Valid Mountain Array</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/941.png" />
+
+Time: O(n); Space: O(1);
+```python
+class Solution:
+    def validMountainArray(self, arr: List[int]) -> bool:
+        l = len(arr)
+
+        if l < 3:
+            return False
+        
+        i = 0
+        while arr[i] < arr[i+1]:
+            i += 1 
+            if i == l - 1:
+                return False  
+        
+        j = l-1
+        while arr[j-1] > arr[j]:
+            j -= 1
+            if j == 0:
+                return False 
+        
+        return i == j
+```
+</details>
+
+<details>
 <summary><b></b></summary>
 <img src="" />
 Time: O(); Space: O();
