@@ -233,6 +233,39 @@ class Solution:
 </details>
 
 <details>
+<summary><b>228. Summary Ranges</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/228.png" />
+
+Time: O(n); Space: O(1);
+```python
+class Solution:
+    def summaryRanges(self, nums: List[int]) -> List[str]:
+        i = 0
+        j = 0
+        res = []
+
+        while j <= len(nums) - 1:
+            start = nums[i]
+
+            while j < len(nums) - 1 and nums[j + 1] - nums[j] == 1:
+                j += 1
+
+            finish = nums[j]
+
+            if start == finish:
+                res.append(str(start))
+            else:
+                res.append(str(start) + "->" + str(finish))
+
+            i = j + 1
+            j += 1
+        return res
+```
+</details>
+
+
+<details>
 <summary><b></b></summary>
 <img src="" />
 Time: O(); Space: O();
