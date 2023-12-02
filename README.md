@@ -264,6 +264,44 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>1431. Kids With the Greatest Number of Candies</b></summary>
+<img src="media_readme/leetcode_tasks/array_and_hashing/1431.png" />
+
+Time: O(n); Space: O(n);
+```python
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        return [candy + extraCandies >= max(candies) for candy in candies]
+```
+</details>
+
+<details>
+<summary><b>674. Longest Continuous Increasing Subsequence</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/674.png" />
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def findLengthOfLCIS(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+
+        res = [1]
+        f = 1
+
+        for i in range(1, len(nums)):
+            if nums[i] > nums[i - 1]:
+                res.append(res[-1] + 1)
+            else:
+                res.append(1)
+
+        return max(res)
+```
+</details>
+
 
 <details>
 <summary><b></b></summary>
