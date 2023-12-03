@@ -133,7 +133,6 @@ class Solution:
 ```
 </details>
 
-
 <details>
 <summary><b>49. Group Anagrams</b></summary>
 
@@ -304,9 +303,19 @@ class Solution:
 
 
 <details>
-<summary><b></b></summary>
-<img src="" />
-Time: O(); Space: O();
+<summary><b>1480. Running Sum of 1d Array</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/1480.png" />
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        for i in range(1, len(nums)):
+            nums[i] += nums[i-1]
+        return nums
+```
 </details>
 
 </details>
