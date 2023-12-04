@@ -397,6 +397,74 @@ class Solution:
         return False
 ```
 </details>
+
+<details>
+<summary><b>704. Binary Search</b></summary>
+
+<img src="media_readme/leetcode_tasks/binary search/704.png" />
+
+Time: O(log(n)); Space: O(1);
+
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l, r = 0, len(nums) - 1
+
+        while l <= r:
+            mid = (r + l) // 2
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                l = mid + 1
+            else:
+                r = mid
+
+        return -1
+```
+</details>
+
+<details>
+<summary><b>69. Sqrt(x)</b></summary>
+
+<img src="media_readme/leetcode_tasks/binary search/69.png" />
+
+Time: O(log(n)); Space: O(1);
+
+```python
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        l, r = 1, x
+
+        while l <= r:
+            mid = (l + r) // 2
+
+            if mid * mid == x:
+                return int(mid)
+            
+            if mid * mid < x:
+                l = mid + 1
+            else:
+                r = mid - 1
+
+        return r
+```
+</details>
+
+
+
+<details>
+<summary><b></b></summary>
+
+<img src="" />
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
 </details>
 
 
