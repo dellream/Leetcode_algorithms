@@ -301,7 +301,6 @@ class Solution:
 ```
 </details>
 
-
 <details>
 <summary><b>1480. Running Sum of 1d Array</b></summary>
 
@@ -315,6 +314,44 @@ class Solution:
         for i in range(1, len(nums)):
             nums[i] += nums[i-1]
         return nums
+```
+</details>
+
+<details>
+<summary><b>896. Monotonic Array</b></summary>
+
+<img src="media_readme/leetcode_tasks/array_and_hashing/896.png" />
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def isMonotonic(self, nums: List[int]) -> bool:
+        i = 0
+        while i < len(nums) - 1 and nums[i] <= nums[i+1]:
+            i += 1
+        
+        j = 0
+        while j < len(nums) - 1 and nums[j] >= nums[j+1]:
+            j += 1
+        
+        return any([i == len(nums) - 1, j == len(nums) - 1])
+```
+</details>
+
+
+
+
+
+<details>
+<summary><b></b></summary>
+
+<img src="" />
+
+Time: O(); Space: O();
+
+```python
+
 ```
 </details>
 
