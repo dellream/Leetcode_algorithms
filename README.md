@@ -451,6 +451,33 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>278. First Bad Version</b></summary>
+
+<img src="media_readme/leetcode_tasks/binary search/278.png" />
+
+Time: O(log(n)); Space: O(1);
+
+```python
+# The isBadVersion API is already defined for you.
+# def isBadVersion(version: int) -> bool:
+
+class Solution:
+    def firstBadVersion(self, n: int) -> int:
+        l, r = 0, n
+        
+        while l <= r:
+            mid = (l + r) // 2
+
+            if isBadVersion(mid) == False:
+                l = mid + 1
+            else:
+                r = mid - 1
+            
+            if isBadVersion(mid-1) == False and isBadVersion(mid) == True:
+                return mid
+```
+</details>
 
 
 <details>
