@@ -33,7 +33,7 @@
 ### Задачи
 
 <details>
-<summary><b>Arrays and hashing:</b></summary>  
+<summary><b>Arrays and hashing:  <br></b></summary>  
 
 <details>
 <summary><b>217. Contains-duplicate:</b></summary>
@@ -355,6 +355,48 @@ Time: O(); Space: O();
 ```
 </details>
 
+</details>
+
+
+<details>
+<summary><b>Binary Search:  <br></b></summary>
+
+<details>
+<summary><b>367. Valid Perfect Square</b></summary>
+
+<img src="media_readme/leetcode_tasks/divmod/367.png" />
+
+Time: O(1); Space: O(1);
+
+```python
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        return num % num ** 0.5 == 0
+```
+
+Time: O(log(n)); Space: O(1);
+```python
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        l, r = 1, num // 2
+
+        if num == 1:
+            return True
+
+        while l <= r:
+            mid = (l + r ) // 2
+            
+            if mid ** 2 == num:
+                return True
+            
+            if mid ** 2 > num:
+                r = mid - 1
+            else:
+                l = mid + 1
+        
+        return False
+```
+</details>
 </details>
 
 
