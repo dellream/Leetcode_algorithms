@@ -574,6 +574,51 @@ class Solution:
 </details>
 
 
+<details>
+<summary><b>Bitwise<br></b></summary>
+
+<details>
+<summary><b>338. Counting Bits</b></summary>
+
+<img src="media_readme/leetcode_tasks/bitwise/338.png"/>
+
+Time: O(n * log(n)); Space: O(1);
+
+```python
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        # ans = [bin(i)[2:].count('1') for i in range(n+1)]
+
+        ans = [0]
+
+        for i in range(1, n + 1):
+            current = 0
+
+            while i:
+                current += i & 1
+                i >>= 1
+            ans.append(current)
+
+        return ans
+```
+</details>
+
+
+<details>
+<summary><b></b></summary>
+
+<img src="" />
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
+</details>>
+
+
 
 
 
