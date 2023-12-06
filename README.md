@@ -603,6 +603,25 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>136. Single Number</b></summary>
+
+<img src="media_readme/leetcode_tasks/bitwise/136.png" />
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        ans = 0
+        
+        for num in nums:
+            ans = ans ^ num
+        
+        return ans
+```
+</details>
+
 
 <details>
 <summary><b></b></summary>
