@@ -33,7 +33,8 @@
 ### Задачи
 
 <details>
-<summary><b>Arrays and hashing:  <br></b></summary>  
+<summary><b>Arrays and hashing:</b></summary>  
+<br>
 
 <details>
 <summary><b>217. Contains-duplicate:</b></summary>
@@ -339,28 +340,11 @@ class Solution:
 ```
 </details>
 
-
-
-
-
-<details>
-<summary><b></b></summary>
-
-<img src="" />
-
-Time: O(); Space: O();
-
-```python
-
-```
 </details>
 
-</details>
-
-
 <details>
-<summary><b>Binary Search:  <br></b></summary>
-
+<summary><b>Binary Search:</b></summary>
+<br>
 <details>
 <summary><b>367. Valid Perfect Square</b></summary>
 
@@ -573,10 +557,9 @@ class Solution:
 
 </details>
 
-
 <details>
-<summary><b>Bitwise<br></b></summary>
-
+<summary><b>Bitwise</b></summary><br>
+<br>
 <details>
 <summary><b>338. Counting Bits</b></summary>
 
@@ -645,16 +628,25 @@ class Solution:
 ```
 </details>
 
-
 <details>
-<summary><b></b></summary>
+<summary><b>191. Number of 1 Bits</b></summary>
 
-<img src="" />
+<img src="media_readme/leetcode_tasks/bitwise/191.png" />
 
-Time: O(); Space: O();
+Time: O(n); Space: O(1);
 
 ```python
+class Solution:
+    def hammingWeight(self, n: int) -> int:
 
+        count = 0
+
+        while n:
+            
+            count += n & 1
+            n >>= 1
+        
+        return count
 ```
 </details>
 
