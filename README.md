@@ -622,6 +622,29 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>461. Hamming Distance</b></summary>
+
+<img src="media_readme/leetcode_tasks/bitwise/461.png" />
+
+Time: O(log(n)); Space: O(1);
+
+```python
+class Solution:
+    def hammingDistance(self, x: int, y: int) -> int:
+
+        ans = 0
+
+        while x or y:
+
+            ans += (x & 1) != (y & 1)
+            x >>= 1
+            y >>= 1
+
+        return ans
+```
+</details>
+
 
 <details>
 <summary><b></b></summary>
