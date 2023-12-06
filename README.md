@@ -546,16 +546,28 @@ class Solution:
 ```
 </details>
 
-
 <details>
-<summary><b></b></summary>
+<summary><b>852. Peak Index in a Mountain Array</b></summary>
 
-<img src="" />
+<img src="media_readme/leetcode_tasks/binary search/852.png" />
 
-Time: O(); Space: O();
+Time: O(log(n)); Space: O(1);
 
 ```python
+class Solution:
+    def peakIndexInMountainArray(self, arr: List[int]) -> int:
+        l, r = 0, len(arr) - 1
 
+        while l <= r:
+            mid = (l + r) // 2
+
+            if arr[mid - 1] < arr[mid] > arr[mid + 1]:
+                return mid
+
+            if arr[mid - 1] < arr[mid]:
+                l = mid + 1
+            else:
+                r = mid
 ```
 </details>
 
