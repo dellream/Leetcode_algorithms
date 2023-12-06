@@ -513,6 +513,39 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>35. Search Insert Position</b></summary>
+
+<img src="media_readme/leetcode_tasks/binary search/35.png" />
+
+Time: O(log(n)); Space: O(1);
+
+```python
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        l, r = 0, len(nums) - 1
+        if len(nums) == 1 and nums[0] < target:
+            return 1
+
+        while l < r:
+            mid = (l + r) // 2
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                l = mid + 1
+            else:
+                r = mid
+
+            if nums[-1] < target:
+                return len(nums)
+            elif nums[0] > target:
+                return 0
+
+        return r
+```
+</details>
+
 
 <details>
 <summary><b></b></summary>
