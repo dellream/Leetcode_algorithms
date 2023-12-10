@@ -729,6 +729,63 @@ class Solution:
 </details>
 
 <details>
+<summary><b>67. Add Binary</b></summary>
+
+<img src="media_readme/leetcode_tasks/divmod/67.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        # res = bin(int(a, 2) + int(b, 2))
+        # return res[2:]
+
+        la, lb = len(a), len(b)
+
+        # Уравняем длину строк
+        if la > lb:
+            b = '0' * (la - lb) + b
+        else:
+            a = '0' * (lb - la) + a
+
+        carry = 0
+        ans = ''
+
+        for i in range(len(a)-1, -1, -1):
+            d1 = int(a[i])
+            d2 = int(b[i])
+
+            carry, d = divmod(d1 + d2 + carry, 2)
+
+            ans += str(d)
+        
+        if carry:
+            ans += str(carry)
+        
+        return ans[::-1]
+```
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
 <summary><b></b></summary><br>
 <br>
 
