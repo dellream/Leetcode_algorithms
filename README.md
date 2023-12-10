@@ -795,6 +795,28 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>509. Fibonacci Number</b></summary>
+
+<img src="media_readme/leetcode_tasks/dynamic programming/509.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def fib(self, n: int) -> int:
+        if n < 2:
+            return n
+        # return self.fib(n-1) + self.fib(n-2)
+
+        n0, n1 = 0, 1
+        for i in range(2, n + 1):
+            cur = n0 + n1
+            n0, n1 = n1, cur
+        return cur
+```
+</details>
+
 </details>
 
 
