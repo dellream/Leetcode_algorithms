@@ -767,6 +767,36 @@ class Solution:
 ```
 </details>
 
+</details>
+
+<details>
+<summary><b>Dynamic Programming</b></summary><br>
+<br>
+
+<details>
+<summary><b>1137. N-th Tribonacci Number</b></summary>
+
+<img src="media_readme/leetcode_tasks/dynamic programming/1137.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def tribonacci(self, n: int) -> int:
+        dp = [0, 1, 1]
+
+        if n < 3:
+            return dp[n]
+
+        for i in range(3, n+1):
+            dp.append(dp[i-3] + dp[i-2] + dp[i-1])
+        
+        return dp[-1]
+```
+</details>
+
+</details>
+
 
 
 
