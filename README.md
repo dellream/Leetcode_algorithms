@@ -706,6 +706,33 @@ class Solution:
 </details>
 
 <details>
+<summary><b>66. Plus One</b></summary>
+
+<img src="media_readme/leetcode_tasks/divmod/66.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        carry = 1
+
+        for i in range(len(digits)-1, -1, -1):
+
+            carry, digits[i] = divmod(carry+digits[i], 10)
+
+            if carry == 0:
+                break
+
+        return digits if not carry else [carry] + digits
+```
+</details>
+
+<details>
+<summary><b></b></summary><br>
+<br>
+
+<details>
 <summary><b></b></summary>
 
 <img src=""/>
