@@ -822,6 +822,36 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>118. Pascal's Triangle</b></summary>
+
+<img src="media_readme/leetcode_tasks/dynamic programming/118.png"/>
+
+Time: O(n * k); Space: O(n * k);
+
+```python
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        dp = [[1], [1, 1]]
+
+        if numRows < 3:
+            return dp[:numRows]
+
+        for _ in range(numRows-2):
+
+            step = [1]  # Добавляем во внутренний список 1 в начало
+
+            # Считаем суммы соседних элементов и вставляем их между соседями
+            for i in range(1, len(dp[-1])):
+                step.append(dp[-1][i] + dp[-1][i-1])
+            
+            step += [1]  # Добавляем во внутренний список 1 в конец
+            dp.append(step)
+            
+        return(dp)
+```
+</details>
+
 </details>
 
 
