@@ -681,6 +681,42 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>258. Add Digits</b></summary>
+
+<img src="media_readme/leetcode_tasks/divmod/258.png"/>
+
+Time: O(log(n)); Space: O(1);
+
+```python
+class Solution:
+    def addDigits(self, num: int) -> int:
+        new = 0
+
+        while num:
+            num, digit = divmod(num, 10)
+
+            new = new + digit
+
+        if new > 9:
+            return self.addDigits(new)
+
+        return new
+```
+</details>
+
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
 </details>
 
 
