@@ -650,7 +650,103 @@ class Solution:
 ```
 </details>
 
-</details>>
+</details>
+
+<details>
+<summary><b>Divmod</b></summary><br>
+<br>
+
+<details>
+<summary><b>9. Palindrome Number</b></summary>
+
+<img src="media_readme/leetcode_tasks/divmod/9.png"/>
+
+Time: O(log(n)); Space: O(1);
+
+```python
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+
+        num = 0
+        orig = x
+
+        while x:
+            x, digit = divmod(x, 10)  # Берем последнюю цифру числа
+
+            num = num * 10 + digit  # Пересобираем число справа налево
+        
+        return num == orig
+```
+</details>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary><b></b></summary><br>
+<br>
+
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
+</details>
+
+
+
+
+
+
+###############################
+
+<details>
+<summary><b></b></summary><br>
+<br>
+
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
+</details>
 
 
 
