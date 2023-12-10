@@ -852,6 +852,29 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary>485. Max Consecutive Ones</b></summary>
+
+<img src="media_readme/leetcode_tasks/dynamic programming/485.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+
+        dp = [0] * (len(nums) + 1)
+
+        for i in range(len(nums)):
+            if nums[i]:
+                dp[i + 1] = dp[i] + 1
+            else:
+                dp[i + 1] = 0
+
+        return max(dp)
+```
+</details>
+
 </details>
 
 
