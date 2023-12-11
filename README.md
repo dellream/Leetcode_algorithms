@@ -961,20 +961,22 @@ class Solution:
 
 <img src="media_readme/leetcode_tasks/hash/268.png"/>
 
-Time: O(n * log(n)); Space: O(1);
+Time: O(n); Space: O(n);
 
 ```python
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        nums = sorted(nums)
-        if nums[0] != 0:
-            return 0
+        # nums = sorted(nums)
+        # if nums[0] != 0:
+        #     return 0
 
-        for i in range(len(nums) - 1):
-            if not nums[i] + 1 == nums[i + 1]:
-                return nums[i] + 1
+        # for i in range(len(nums) - 1):
+        #     if not nums[i] + 1 == nums[i + 1]:
+        #         return nums[i] + 1
         
-        return nums[-1] + 1
+        # return nums[-1] + 1
+        
+        return list(set(range(len(nums)+1)) - set(nums))[0] 
 ```
 </details>
 
