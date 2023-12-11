@@ -906,14 +906,25 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>1346. Check If N and Its Double Exist</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/hash/1346.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(n);
 
 ```python
+class Solution:
+    def checkIfExist(self, arr: List[int]) -> bool:
+        
+        hashset = set()
 
+        for num in arr:
+
+            if num * 2 in hashset or num / 2 in hashset:
+                return True
+            hashset.add(num)
+        
+        return False    
 ```
 </details>
 
