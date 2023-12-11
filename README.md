@@ -957,14 +957,24 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>268. Missing Number</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/hash/268.png"/>
 
-Time: O(); Space: O();
+Time: O(n * log(n)); Space: O(1);
 
 ```python
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums = sorted(nums)
+        if nums[0] != 0:
+            return 0
 
+        for i in range(len(nums) - 1):
+            if not nums[i] + 1 == nums[i + 1]:
+                return nums[i] + 1
+        
+        return nums[-1] + 1
 ```
 </details>
 
