@@ -339,7 +339,7 @@ class Solution:
         return any([i == len(nums) - 1, j == len(nums) - 1])
 ```
 </details>
-
+<br>
 </details>
 
 <details>
@@ -554,7 +554,7 @@ class Solution:
                 r = mid
 ```
 </details>
-
+<br>
 </details>
 
 <details>
@@ -649,7 +649,7 @@ class Solution:
         return count
 ```
 </details>
-
+<br>
 </details>
 
 <details>
@@ -766,7 +766,7 @@ class Solution:
         return ans[::-1]
 ```
 </details>
-
+<br>
 </details>
 
 <details>
@@ -853,7 +853,7 @@ class Solution:
 </details>
 
 <details>
-<summary>485. Max Consecutive Ones</b></summary>
+<summary><b>485. Max Consecutive Ones</b></summary>
 
 <img src="media_readme/leetcode_tasks/dynamic programming/485.png"/>
 
@@ -874,30 +874,36 @@ class Solution:
         return max(dp)
 ```
 </details>
-
+<br>
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<details>
+<summary><b>Hash</b></summary>
+<br>
 
 <details>
-<summary><b></b></summary><br>
-<br>
+<summary><b>929. Unique Email Addresses</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/929.png"/>
+
+Time: O(n * k); Space: O(n * k);
+
+```python
+class Solution:
+    def numUniqueEmails(self, emails: List[str]) -> int:
+        hashset = set()
+
+        for e in emails:
+
+            localname, domain = e.split('@')
+            
+            localname = localname.split('+')[0].replace('.', '')
+
+            hashset.add(f'{localname}@{domain}')
+
+        return len(hashset) 
+```
+</details>
 
 <details>
 <summary><b></b></summary>
@@ -911,33 +917,17 @@ Time: O(); Space: O();
 ```
 </details>
 
-</details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <details>
-<summary><b></b></summary><br>
-<br>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
 
 <details>
 <summary><b></b></summary>
@@ -951,6 +941,20 @@ Time: O(); Space: O();
 ```
 </details>
 
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
+
+<br>
 </details>
 
 
@@ -961,7 +965,7 @@ Time: O(); Space: O();
 ###############################
 
 <details>
-<summary><b></b></summary><br>
+<summary><b></b></summary>
 <br>
 
 <details>
