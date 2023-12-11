@@ -929,14 +929,30 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>389. Find the Difference</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/hash/389.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(n);
 
 ```python
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        # res = Counter(t) - Counter(s)
+        # return list(res.keys())[0]
 
+        count_s = {}
+
+        for char in s:
+            count_s[char] = count_s.get(char, 0) + 1
+        
+        for char in t:
+            if char not in count_s or count_s[char] == 0:
+                return char
+            
+            count_s[char] -= 1
+        
+        return None
 ```
 </details>
 
