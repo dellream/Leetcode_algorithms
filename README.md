@@ -1073,6 +1073,29 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>387. First Unique Character in a String</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/387.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        hashset = {}
+
+        for i in s:
+            hashset[i] = hashset.get(i, 0) + 1
+        
+        for i, v in enumerate(s):
+            if hashset[v] == 1:
+                return i
+        
+        return -1
+```
+</details>
+
 <br>
 </details>
 
