@@ -1050,6 +1050,29 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>771. Jewels and Stones</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/771.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+
+        jset = set(jewels)
+
+        jewels_count = 0
+
+        for i in stones:
+            if i in jset:
+                jewels_count += 1
+        
+        return jewels_count
+```
+</details>
+
 <br>
 </details>
 
