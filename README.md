@@ -1096,6 +1096,28 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>383. Ransom Note</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/383.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        counter = Counter(magazine)
+
+        for char in ransomNote:
+            if char in counter and counter[char] > 0:
+                counter[char] -= 1
+            else:
+                return False
+
+        return True
+```
+</details>
+
 <br>
 </details>
 
