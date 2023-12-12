@@ -1036,6 +1036,20 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>448. Find All Numbers Disappeared in an Array</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/448.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+        return set(range(1, len(nums)+1)) - set(nums)
+```
+</details>
+
 <br>
 </details>
 
