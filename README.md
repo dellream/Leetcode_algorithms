@@ -969,14 +969,28 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>409. Longest Palindrome</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/hash/409.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(n);
 
 ```python
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        hashset = {}
 
+        for char in s:
+            hashset[char] = hashset.get(char, 0) + 1
+
+        res = 0
+
+        for k, v in hashset.items():
+            cur = v - (v % 2)
+            res += cur
+            hashset[k] -= cur
+        
+        return res if not sum(hashset.values()) else res + 1
 ```
 </details>
 
