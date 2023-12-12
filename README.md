@@ -994,6 +994,34 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>205. Isomorphic Strings</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/205.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        ds, dt = {}, {}
+        
+        for i in range(len(s)):
+            
+            if s[i] in ds:
+                if ds[s[i]] != t[i]:
+                    return False
+            else:
+                if t[i] in dt and dt[t[i]] != s[i]:
+                    return False
+                else: 
+                    ds[s[i]] = t[i]
+                    dt[t[i]] = s[i]
+
+        return True
+```
+</details>
+
 <br>
 </details>
 
