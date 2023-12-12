@@ -1022,6 +1022,20 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>349. Intersection of Two Arrays</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/349.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        return list(set(nums1) & set(nums2))
+```
+</details>
+
 <br>
 </details>
 
