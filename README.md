@@ -1212,6 +1212,40 @@ class Solution:
 <details>
 <summary><b></b></summary>
 
+<img src="media_readme/leetcode_tasks/linked list/203.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        
+        dummy = ListNode(None, head)
+        current = head
+        previous = dummy
+
+        while current:
+            
+            if current.val == val:
+                previous.next = current.next
+            else:
+                previous = current
+            
+            current = current.next
+
+        return dummy.next
+
+```
+</details>
+
+<details>
+<summary><b></b></summary>
+
 <img src=""/>
 
 Time: O(); Space: O();
