@@ -1145,6 +1145,36 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>350. Intersection of Two Arrays II</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/350.png"/>
+
+Time: O(m + n); Space: O(m + n);
+
+```python
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        # c = Counter(nums1) & Counter(nums2)
+        # return list(c.elements())
+        
+        hashset1, hashset2 = {}, {}
+        result = []
+
+        for i in nums1:
+            hashset1[i] = hashset1.get(i, 0) + 1
+
+        for j in nums2:
+            hashset2[j] = hashset2.get(j, 0) + 1
+
+        for key in hashset1.keys():
+            if key in hashset2:
+                result.extend([key] * min(hashset1[key], hashset2[key]))
+
+        return result
+```
+</details>
+
 <br>
 </details>
 
