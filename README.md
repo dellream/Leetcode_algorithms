@@ -1118,6 +1118,33 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>202. Happy Number</b></summary>
+
+<img src="media_readme/leetcode_tasks/hash/202.png"/>
+
+Time: O(log(n)); Space: O(log(n));
+
+```python
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        seen = set()
+
+        while n != 1 and n not in seen:
+            seen.add(n)
+
+            new = 0
+
+            while n:
+                n, digit = divmod(n, 10)
+                new += digit ** 2
+            
+            n = new
+        
+        return n == 1
+```
+</details>
+
 <br>
 </details>
 
