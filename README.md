@@ -1178,7 +1178,51 @@ class Solution:
 <br>
 </details>
 
+<details>
+<summary><b></b></summary>
+<br>
 
+<details>
+<summary><b>206. Reverse Linked List</b></summary>
+
+<img src="media_readme/leetcode_tasks/linked list/206.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        previous, current = None, head
+
+        while current:
+            nxt = current.next
+            current.next = previous
+            previous = current
+            current = nxt
+
+        return previous
+```
+</details>
+
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
+<br>
+</details>
 
 
 
@@ -1201,6 +1245,8 @@ Time: O(); Space: O();
 ```
 </details>
 
+
+<br>
 </details>
 
 
