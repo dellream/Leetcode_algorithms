@@ -1443,6 +1443,63 @@ class Solution:
 <br>
 </details>
 
+<details>
+<summary><b>Math</b></summary>
+<br>
+
+<details>
+<summary><b>1295. Find Numbers with Even Number of Digits</b></summary>
+
+<img src="media_readme/leetcode_tasks/math/1295.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        # nums = [str(i) for i in nums]
+        
+        # res = 0
+        # for i in nums:
+        #     if len(i) % 2 == 0:
+        #         res += 1
+        
+        # return res
+
+        def div_num(num):
+            res = 0
+
+            while num:
+                num //= 10
+                res += 1
+            
+            return res
+        
+        ans = 0
+
+        for num in nums:
+            ans += 0 if div_num(num) % 2 else 1
+        
+        return ans
+```
+</details>
+
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
+
+<br>
+</details>
+
 
 
 
