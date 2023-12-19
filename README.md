@@ -1508,13 +1508,14 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>231. Power of Two</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/math/231.png"/>
 
-Time: O(); Space: O();
+Time: O(1); Space: O(1);
 
 ```python
+import math 
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
         # Loop
