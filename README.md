@@ -1408,6 +1408,38 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>83. Remove Duplicates from Sorted List</b></summary>
+
+<img src="media_readme/leetcode_tasks/linked list/83.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        
+        dummy = ListNode(None, head)
+        prev = dummy
+
+        while head:
+
+            if head.val != prev.val:
+                head = head.next
+                prev = prev.next
+            else:
+                prev.next = prev.next.next
+                head = head.next 
+        
+        return dummy.next
+```
+</details>
+
 <br>
 </details>
 
