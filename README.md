@@ -1485,6 +1485,29 @@ class Solution:
 </details>
 
 <details>
+<summary><b>342. Power of Four</b></summary>
+
+<img src="media_readme/leetcode_tasks/math/342.png"/>
+
+Time: O(1); Space: O(1);
+
+```python
+class Solution:
+    def isPowerOfFour(self, n: int) -> bool:
+        # Recursion (Time: O(log(n)); Space: O(log(n)))
+        # if n < 1:
+        #     return False
+        # 
+        # if n == 1:
+        #     return True
+        # 
+        # return self.isPowerOfFour(n / 4)
+        
+        return n > 0 and math.log(n, 4) == int(math.log(n, 4))
+```
+</details>
+
+<details>
 <summary><b></b></summary>
 
 <img src=""/>
@@ -1492,10 +1515,23 @@ class Solution:
 Time: O(); Space: O();
 
 ```python
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        # Loop
+        # if n<=0:
+        #     return False
+        
+        # while n>1:
+        #     if n % 2 != 0:
+        #         return False
+            
+        #     n = n //2 # 16//2
+        
+        # return True
 
+        return n > 0 and math.log2(n) == int(math.log2(n))
 ```
 </details>
-
 
 <br>
 </details>
