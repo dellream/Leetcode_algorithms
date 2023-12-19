@@ -1179,7 +1179,7 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>Linked list</b></summary>
 <br>
 
 <details>
@@ -1240,6 +1240,44 @@ class Solution:
 
         return dummy.next
 
+```
+</details>
+
+<details>
+<summary><b>21. Merge Two Sorted Lists</b></summary>
+
+<img src="media_readme/leetcode_tasks/linked list/21.png"/>
+
+Time: O(n+m); Space: O(1);
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode(None)
+        tail = dummy
+
+
+        while list1 and list2:
+            if list1.val < list2.val:
+                tail.next = list1
+                list1 = list1.next
+            else:
+                tail.next = list2
+                list2 = list2.next
+            tail = tail.next
+        
+        if list1:
+            tail.next = list1
+        elif list2:
+            tail.next = list2
+
+        return dummy.next
 ```
 </details>
 
