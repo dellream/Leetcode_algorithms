@@ -1534,6 +1534,32 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>412. Fizz Buzz</b></summary>
+
+<img src="media_readme/leetcode_tasks/math/412.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        res = []
+
+        for i in range(1, n+1):
+            if i % 3 == 0 and i % 5 == 0:
+                res.append('FizzBuzz')
+            elif i % 3 == 0:
+                res.append('Fizz')
+            elif i % 5 == 0:
+                res.append('Buzz')
+            else:
+                res.append(str(i))
+        
+        return res
+```
+</details>
+
 <br>
 </details>
 
