@@ -1376,14 +1376,35 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>1290. Convert Binary Number in a Linked List to Integer</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/linked list/1290.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(1);
 
 ```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def getDecimalValue(self, head: ListNode) -> int:
+        # res = []
+        
+        # while head:
+        #     res.append(head.val)
+        #     head = head.next
+        
+        # return int(''.join(str(i) for i in res), 2)
 
+        ans = 0
+
+        while head:
+            ans = ans * 2 + head.val
+            head = head.next
+
+        return ans
 ```
 </details>
 
