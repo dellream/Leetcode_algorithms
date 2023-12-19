@@ -1282,14 +1282,28 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>876. Middle of the Linked List</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/linked list/876.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(1);
 
 ```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        slow = head 
+        fast = head
 
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        
+        return slow
 ```
 </details>
 
