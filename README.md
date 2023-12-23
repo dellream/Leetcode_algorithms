@@ -1593,14 +1593,35 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>643. Maximum Average Subarray I</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/sliding window/643.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(n);
 
 ```python
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
 
+        q = deque([])
+
+        ans = -float('inf')
+
+        cnt = 0
+        cur = 0
+
+        for i in range(len(nums)):
+
+            cur += nums[i]
+            cnt += 1 
+
+            if cnt == k:
+                ans = max(ans, cur/k)
+            elif cnt > k:
+                cur -= nums[i-k]
+                ans = max(ans, cur/k)
+            
+        return ans
 ```
 </details>
 
