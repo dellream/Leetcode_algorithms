@@ -1625,6 +1625,29 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>219. Contains Duplicate II</b></summary>
+
+<img src="media_readme/leetcode_tasks/sliding window/219.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        d = {}
+
+        for i, num in enumerate(nums):
+            
+            if num in d and i - d[num] <= k:
+                return True
+
+            d[num] = i
+
+        return False
+```
+</details>
+
 
 <br>
 </details>
