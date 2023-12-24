@@ -1652,6 +1652,44 @@ class Solution:
 <br>
 </details>
 
+<details>
+<summary><b>Stack</b></summary>
+<br>
+
+<details>
+<summary><b>20. Valid Parentheses</b></summary>
+
+<img src="media_readme/leetcode_tasks/stack/20.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        close_to_open = {
+            ')' : '(',
+            ']' : '[',
+            '}' : '{'
+        }
+        
+        for bracket in s:
+            if bracket not in close_to_open:
+                stack.append(bracket)
+            else:
+                if stack and stack[-1] == close_to_open[bracket]:
+                    stack.pop()
+                else:
+                    return False
+        
+        return True if not stack else False
+```
+</details>
+
+
+<br>
+</details>
+
 
 ###############################
 
