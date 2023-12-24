@@ -1791,6 +1791,39 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>482. License Key Formatting</b></summary>
+
+<img src="media_readme/leetcode_tasks/string/482.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def licenseKeyFormatting(self, s: str, k: int) -> str:
+        s = s.replace('-', '').upper()
+
+        if len(s) < k:
+            return s
+
+        count = 0
+        res = ''
+
+        if len(s) % k != 0:
+            res += s[0: len(s) % k] + '-'
+
+        for char in s[len(s) % k:]:
+            if count < k:
+                res += char
+                count += 1
+            else:
+                res += '-' + char
+                count = 1
+
+        return res
+```
+</details>
+
 
 <br>
 </details>
