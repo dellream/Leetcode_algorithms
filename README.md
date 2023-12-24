@@ -1706,6 +1706,28 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>1047. Remove All Adjacent Duplicates In String</b></summary>
+
+<img src="media_readme/leetcode_tasks/stack/1047.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def removeDuplicates(self, s: str) -> str:
+        stack = []
+
+        for c in s:
+            if stack and stack[-1] == c:
+                stack.pop()
+            else:
+                stack.append(c)
+        
+        return ''.join(stack)
+```
+</details>
+
 
 <br>
 </details>
