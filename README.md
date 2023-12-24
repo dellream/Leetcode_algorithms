@@ -1728,6 +1728,34 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>844. Backspace String Compare</b></summary>
+
+<img src="media_readme/leetcode_tasks/stack/844.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def backspaceCompare(self, s: str, t: str) -> bool:
+        
+        def typing(string: str) -> str:
+        
+            stack = []
+
+            for c in string:
+                if c == '#':
+                    if stack:
+                        stack.pop()
+                else:
+                    stack.append(c)
+            
+            return ''.join(stack)
+
+        return typing(s) == typing(t)
+```
+</details>
+
 
 <br>
 </details>
