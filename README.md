@@ -1760,6 +1760,41 @@ class Solution:
 <br>
 </details>
 
+<details>
+<summary><b>String</b></summary>
+<br>
+
+<details>
+<summary><b>551. Student Attendance Record I</b></summary>
+
+<img src="media_readme/leetcode_tasks/string/551.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def checkRecord(self, s: str) -> bool:
+        if s.count('A') >= 2:
+            return False
+        
+        l_streak = 0 
+
+        for char in s:
+            if char == 'L':
+                l_streak += 1
+                if l_streak > 2:
+                    return False
+            else:
+                l_streak = 0
+        
+        return True
+```
+</details>
+
+
+<br>
+</details>
+
 
 ###############################
 
