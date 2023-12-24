@@ -1824,6 +1824,24 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>58. Length of Last Word</b></summary>
+
+<img src="media_readme/leetcode_tasks/string/58.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        s = s.rstrip()
+
+        res = s[s.rfind(' ')+1:].rstrip()
+
+        return len(res)  
+```
+</details>
+
 
 <br>
 </details>
