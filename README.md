@@ -1686,6 +1686,26 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>392. Is Subsequence</b></summary>
+
+<img src="media_readme/leetcode_tasks/stack/392.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        stack = list(s)
+
+        for c in range(len(t)-1, -1, -1):
+            if stack and stack[-1] == t[c]:
+                stack.pop()
+        
+        return True if not stack else False
+```
+</details>
+
 
 <br>
 </details>
