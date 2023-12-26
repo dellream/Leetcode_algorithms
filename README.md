@@ -1884,6 +1884,20 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>520. Detect Capital</b></summary>
+
+<img src="media_readme/leetcode_tasks/string/520.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        return word.isupper() or word.istitle() or word.islower()
+```
+</details>
+
 
 <br>
 </details>
