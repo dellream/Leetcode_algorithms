@@ -1867,14 +1867,20 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>28. Find the Index of the First Occurrence in a String</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/string/28.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(1);
 
 ```python
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        for i in range(len(haystack) - len(needle) + 1):
+            if needle == haystack[i:len(needle)+i]:
+                return i
 
+        return -1
 ```
 </details>
 
