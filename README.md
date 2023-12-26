@@ -1842,6 +1842,42 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>14. Longest Common Prefix</b></summary>
+
+<img src="media_readme/leetcode_tasks/string/14.png"/>
+
+Time: O(n*k); Space: O(1);
+
+```python
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        candidate = strs[0]
+
+        for word in strs[1:]:
+            if len(word) < len(candidate):
+                candidate = candidate[:len(word)]
+
+            for i in range(len(candidate)-1, -1, -1):
+                if candidate[i] != word[i]:
+                    candidate = candidate[:i]
+        
+        return candidate
+```
+</details>
+
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
 
 <br>
 </details>
