@@ -1986,6 +1986,53 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>543. Diameter of Binary Tree</b></summary>
+
+<img src="media_readme/leetcode_tasks/tree/543.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        diameter = 0
+    
+        def dfs(root): 
+            if root is None: 
+                return 0
+            left = dfs(root.left)
+            right = dfs(root.right)
+            
+            nonlocal diameter
+            diameter = max(left + right, diameter)
+            
+            return max(left, right) + 1
+            
+        dfs(root)
+        
+        return diameter
+```
+</details>
+
+<details>
+<summary><b></b></summary>
+
+<img src=""/>
+
+Time: O(); Space: O();
+
+```python
+
+```
+</details>
+
 
 <br>
 </details>
