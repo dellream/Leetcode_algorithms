@@ -2074,6 +2074,42 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>572. Subtree of Another Tree</b></summary>
+
+<img src="media_readme/leetcode_tasks/tree/572.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        if not root:
+            return False
+
+        def is_same_tree(r, s):
+            if not r and not s:
+                return True
+            elif r and s and r.val == s.val:
+                return is_same_tree(r.left, s.left) and is_same_tree(r.right, s.right)
+            else:
+                return False
+
+        # Check if the current subtree rooted at 'root' is the same as 'subRoot'.
+        if is_same_tree(root, subRoot):
+            return True
+        else:
+            # Recursively check in the left and right subtrees.
+            return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
+```
+</details>
+
 
 <br>
 </details>
