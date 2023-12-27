@@ -2022,14 +2022,30 @@ class Solution:
 </details>
 
 <details>
-<summary><b></b></summary>
+<summary><b>110. Balanced Binary Tree</b></summary>
 
-<img src=""/>
+<img src="media_readme/leetcode_tasks/tree/110.png"/>
 
-Time: O(); Space: O();
+Time: O(n); Space: O(n);
 
 ```python
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
 
+        def dfs(root):
+            if not root:
+                return [True, 0]
+
+            # recursively go down to the very bottom (O(n))
+            left = dfs(root.left)
+            right = dfs(root.right)
+
+            # watching that current node is balanced by children nodes
+            balanced = left[0] and right[0] and abs(left[1] - right[1]) <= 1
+
+            return [balanced, 1 + max(left[1], right[1])]
+
+        return dfs(root)[0]
 ```
 </details>
 
