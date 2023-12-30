@@ -2114,6 +2114,36 @@ class Solution:
 <br>
 </details>
 
+<details>
+<summary><b>Two pointers</b></summary>
+<br>
+
+<details>
+<summary><b>344. Reverse String</b></summary>
+
+<img src="media_readme/leetcode_tasks/two pointers/344.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        l, r = 0, len(s) - 1
+
+        while l <= r:
+            s[l], s[r] = s[r], s[l]
+            l += 1
+            r -= 1
+```
+</details>
+
+
+<br>
+</details>
+
 
 ###############################
 
