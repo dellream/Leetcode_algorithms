@@ -2182,6 +2182,31 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>977. Squares of a Sorted Array</b></summary>
+
+<img src="media_readme/leetcode_tasks/two pointers/977.png"/>
+
+Time: O(n); Space: O(n);
+
+```python
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        l, r = 0, len(nums) - 1
+        res = []
+
+        while l <= r:
+            if abs(nums[l]) > abs(nums[r]):
+                res.append(nums[l] ** 2)
+                l += 1
+            else:
+                res.append(nums[r] ** 2)
+                r -= 1
+        
+        return res[::-1]
+```
+</details>
+
 
 <br>
 </details>
