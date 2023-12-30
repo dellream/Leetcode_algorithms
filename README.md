@@ -2160,6 +2160,28 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>905. Sort Array By Parity</b></summary>
+
+<img src="media_readme/leetcode_tasks/two pointers/905.png"/>
+
+Time: O(n); Space: O(1);
+
+```python
+class Solution:
+    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+        
+        j = 0
+
+        for i in range(len(nums)):
+            if nums[i] % 2 == 0:
+                nums[i], nums[j] = nums[j], nums[i]
+                j += 1
+        
+        return nums
+```
+</details>
+
 
 <br>
 </details>
