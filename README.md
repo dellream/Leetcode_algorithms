@@ -2140,6 +2140,26 @@ class Solution:
 ```
 </details>
 
+<details>
+<summary><b>557. Reverse Words in a String III</b></summary>
+
+<img src="media_readme/leetcode_tasks/two pointers/557.png"/>
+
+Time: O(n + m); Space: O(n + m);
+
+```python
+class Solution:
+    def reverseWords(self, s: str) -> str:
+
+        s = s.split(' ')
+
+        for word in range(len(s)):
+            s[word] = s[word][::-1] 
+        
+        return ' '.join(s)
+```
+</details>
+
 
 <br>
 </details>
